@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CDA6DC2A1B5E48470018BB16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA6DC291B5E48470018BB16 /* Foundation.framework */; };
 		CDA6DC351B5E48470018BB16 /* CCClockOpenToAlarm8.mm in Sources */ = {isa = PBXBuildFile; fileRef = CDA6DC341B5E48470018BB16 /* CCClockOpenToAlarm8.mm */; };
+		CDA6DC401B5E485D0018BB16 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA6DC3F1B5E485D0018BB16 /* libsubstrate.dylib */; };
+		CDA6DC421B5E4D380018BB16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA6DC411B5E4D380018BB16 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,9 +20,11 @@
 		CDA6DC2F1B5E48470018BB16 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
 		CDA6DC311B5E48470018BB16 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
 		CDA6DC321B5E48470018BB16 /* CCClockOpenToAlarm8-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCClockOpenToAlarm8-Prefix.pch"; sourceTree = "<group>"; };
-		CDA6DC331B5E48470018BB16 /* CCClockOpenToAlarm8.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = CCClockOpenToAlarm8.xm; sourceTree = "<group>"; };
+		CDA6DC331B5E48470018BB16 /* CCClockOpenToAlarm8.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = CCClockOpenToAlarm8.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		CDA6DC341B5E48470018BB16 /* CCClockOpenToAlarm8.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CCClockOpenToAlarm8.mm; sourceTree = "<group>"; };
 		CDA6DC391B5E48470018BB16 /* CCClockOpenToAlarm8.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = CCClockOpenToAlarm8.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/CCClockOpenToAlarm8.plist; sourceTree = "<group>"; };
+		CDA6DC3F1B5E485D0018BB16 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = ../../../../opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<group>"; };
+		CDA6DC411B5E4D380018BB16 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDA6DC421B5E4D380018BB16 /* UIKit.framework in Frameworks */,
+				CDA6DC401B5E485D0018BB16 /* libsubstrate.dylib in Frameworks */,
 				CDA6DC2A1B5E48470018BB16 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +61,8 @@
 		CDA6DC281B5E48470018BB16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDA6DC411B5E4D380018BB16 /* UIKit.framework */,
+				CDA6DC3F1B5E485D0018BB16 /* libsubstrate.dylib */,
 				CDA6DC291B5E48470018BB16 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -287,6 +295,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCClockOpenToAlarm8/CCClockOpenToAlarm8-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
@@ -307,6 +319,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CCClockOpenToAlarm8/CCClockOpenToAlarm8-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/iOSOpenDev/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				iOSOpenDevBuildPackageOnAnyBuild = NO;
 				iOSOpenDevCopyOnBuild = NO;
@@ -337,6 +353,7 @@
 				CDA6DC3E1B5E48470018BB16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

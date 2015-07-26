@@ -1,17 +1,11 @@
 Package: de.nautigg.CCClockOpenToAlarm8
 Name: CCClockOpenToAlarm8
-Version: 0.1-1
-Description: 
-Section: System
-Depends: firmware (>= 5.0), mobilesubstrate
-Conflicts: 
-Replaces: 
+Version: 1.0
+Description: CC clock shortcut opens alarm section
+Section: Tweaks
+Depends: firmware (>= 8.0), mobilesubstrate
 Priority: optional
 Architecture: iphoneos-arm
-Author: Lukas Werner
-dev: 
-Homepage: 
-Depiction: 
-Maintainer: 
-Icon: 
-
+Author: luke <luke@peng-u-in.de>
+Depiction: http://repo.peng-u-in.de/deps/index_new.php?id=de.nautigg.CCClockOpenToAlarm8
+Maintainer: luke <luke@peng-u-in.de>
